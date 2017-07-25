@@ -2,12 +2,17 @@ import React, { Component } from 'react';
 import { View, Text, StyleSheet } from 'react-native';
 
 export default class About extends Component {
+    state = {
+        title: 'About',
+        text: 'This is my first android application.'
+    }
+
     render() {
         return (
             <View style={styles.container}>
                 <View style={styles.content}>    
-                    <Text style={styles.textContent}>About</Text>
-                    <Text style={styles.text}>This is my first android application.</Text>
+                    <Text style={styles.textContent}>{this.state.title}</Text>
+                    <Text style={styles.text}>{this.state.text}</Text>
                 </View>
 
                 <View style={styles.footer}>
@@ -37,6 +42,7 @@ const styles = StyleSheet.create({
         color: 'white'
     },
     footer: {
-        alignItems: 'center'
+        alignItems: 'center',
+        marginBottom: 10
     }
 });
