@@ -2,6 +2,10 @@ import React, { Component } from 'react';
 import { View, Text, StyleSheet } from 'react-native';
 
 export default class About extends Component {
+    static navigationOptions = {
+        title: 'About',
+    };
+
     state = {
         title: 'About',
         text: 'This is my first android application. This application is powered by React-Native.'

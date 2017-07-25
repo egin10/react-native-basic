@@ -2,12 +2,18 @@ import React, {Component} from 'react';
 import { Text, View, TouchableOpacity, Image, StyleSheet } from 'react-native';
 
 export default class Home extends Component {
+    // static navigationOptions = {
+    //     title: 'Home',
+    // };
+      
     state = {
         alertText: 'KiwKiwKiw',
         uri: 'https://www.appcoda.com/wp-content/uploads/2015/04/react-native.png'
       }
         
   render() {
+    const { navigate } = this.props.navigation;
+
     return (
       <View style={styles.container}>
         <View style={styles.content}>
@@ -20,6 +26,12 @@ export default class Home extends Component {
             onPress={ ()=>{alert(this.state.alertText)} }
             style={styles.touchOpacity}>
             <Text style={styles.textContent}>Let's Start!</Text>
+          </TouchableOpacity>
+
+          <TouchableOpacity 
+            onPress={ () => navigate('About') }
+            style={styles.touchOpacity}>
+            <Text style={styles.textContent}>About</Text>
           </TouchableOpacity>
         </View>
 
