@@ -20,6 +20,7 @@ export default class Home extends Component {
             <Text style={styles.textContent}>Let's Start!</Text>
           </TouchableOpacity>
         </View>
+
         <View style={styles.footer}>
           <Text style={styles.textFooter}>©2017 egin10</Text>
         </View>        
@@ -31,7 +32,7 @@ export default class Home extends Component {
 const styles = StyleSheet.create({
   container : {
     flex: 1,
-    backgroundColor: '#dcdcdc'
+    backgroundColor: '#2c3e50',
   },
   content: {
     flex: 1,
