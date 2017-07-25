@@ -16,7 +16,9 @@ export default class Home extends Component {
             style={styles.image}
            />
 
-          <TouchableOpacity onPress={ ()=>{alert(this.state.alertText)} } style={{paddingTop: 10}}>
+          <TouchableOpacity 
+            onPress={ ()=>{alert(this.state.alertText)} }
+            style={styles.touchOpacity}>
             <Text style={styles.textContent}>Let's Start!</Text>
           </TouchableOpacity>
         </View>
@@ -48,7 +50,12 @@ const styles = StyleSheet.create({
     height: 100,
     borderRadius: 20,
     justifyContent: 'center',
-    alignItems: 'center'
+    alignItems: 'center',
+  },
+  touchOpacity: {
+    marginTop: 10, 
+    backgroundColor: '#ffffff', 
+    borderRadius: 10
   },
   footer:{
     padding: 10,
