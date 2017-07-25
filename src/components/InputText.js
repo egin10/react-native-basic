@@ -14,11 +14,14 @@ export default class InputText extends Component {
             text: "" ,
             pass: "" 
         };
+
+        this.onsubmit = this.onsubmit.bind(this);
     }
 
   onsubmit() {
-      this.setState({text});
-      this.setState({pass});
+      this.setState({text: ''})
+      this.setState({pass: ''})
+      alert(`Username : ${this.state.text} and Password : ${this.state.pass}`);
   }
 
   render() {
@@ -28,14 +31,14 @@ export default class InputText extends Component {
           <Text style={styles.textContent}>Username</Text>
           <TextInput
             style={styles.textIn}
-            //value={this.state.text}
+            value={this.state.text}
             autoCapitalize={"none"}
             onChangeText={(text) => this.setState({text})}
           />
           <Text style={styles.textContent}>Password</Text>
           <TextInput
             style={styles.textIn}
-            //value={this.state.pass}
+            value={this.state.pass}
             secureTextEntry={true}
             autoCapitalize={"none"}
             onChangeText={(pass) => this.setState({pass})}
