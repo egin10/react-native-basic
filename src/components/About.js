@@ -2,10 +2,6 @@ import React, { Component } from 'react';
 import { View, Text, StyleSheet } from 'react-native';
 
 export default class About extends Component {
-    static navigationOptions = {
-        title: 'About',
-    };
-
     state = {
         title: 'About',
         text: 'This is my first android application. This application is powered by React-Native.'
@@ -20,7 +16,7 @@ export default class About extends Component {
                 </View>
 
                 <View style={styles.footer}>
-                    <Text style={{color: 'white'}}>egin10</Text>
+                    <Text style={styles.textFooter}>©2017 egin10</Text>
                 </View>
             </View>
         );
@@ -46,8 +42,13 @@ const styles = StyleSheet.create({
         fontSize: 15,
         color: 'white'
     },
-    footer: {
+    footer:{
+        padding: 10,
         alignItems: 'center',
-        marginBottom: 10
+        justifyContent: 'center'
+    },
+    textFooter: {
+        color: 'white',
+        fontSize: 12
     }
 });

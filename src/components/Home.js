@@ -2,9 +2,6 @@ import React, {Component} from 'react';
 import { Text, View, TouchableOpacity, Image, StyleSheet } from 'react-native';
 
 export default class Home extends Component {
-    // static navigationOptions = {
-    //     title: 'Home',
-    // };
       
     state = {
         alertText: 'KiwKiwKiw',
@@ -28,6 +25,12 @@ export default class Home extends Component {
             <Text style={styles.textContent}>Let's Start!</Text>
           </TouchableOpacity>
 
+          <TouchableOpacity 
+            onPress={ () => navigate('InputText') }
+            style={styles.touchOpacity}>
+            <Text style={styles.textContent}>InputText</Text>
+          </TouchableOpacity>
+          
           <TouchableOpacity 
             onPress={ () => navigate('About') }
             style={styles.touchOpacity}>
@@ -58,8 +61,8 @@ const styles = StyleSheet.create({
     color: 'green'
   },
   image: {
-    width: 100,
-    height: 100,
+    width: 150,
+    height: 150,
     borderRadius: 20,
     justifyContent: 'center',
     alignItems: 'center',

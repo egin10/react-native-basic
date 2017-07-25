@@ -5,15 +5,40 @@ import Expo from "expo";
 
 import Home from "./Home";
 import About from "./About";
+import InputText from "./InputText";
 
 const routes = {
   Home: {
     name: "Home",
-    screen: Home
+    screen: Home,
+    navigationOptions: {
+      headerTintColor: "black",
+      headerStyle: {
+        backgroundColor: "gainsboro"
+      }
+    }
   },
   About: {
     name: "About",
-    screen: About
+    screen: About,
+    navigationOptions: {
+      title: "About",
+      headerTintColor: "black",
+      headerStyle: {
+        backgroundColor: "gainsboro"
+      }
+    }
+  },
+  InputText: {
+    name: "InputText",
+    screen: InputText,
+    navigationOptions: {
+      title: "InputText",
+      headerTintColor: "black",
+      headerStyle: {
+        backgroundColor: "gainsboro"
+      }
+    }
   }
 };
 
@@ -31,7 +56,6 @@ export default class Navigation extends React.Component {
 
 const styles = StyleSheet.create({
   container: {
-    flex: 1,
-    backgroundColor: "#fff"
+    flex: 1
   }
 });
