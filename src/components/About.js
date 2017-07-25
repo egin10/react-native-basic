@@ -1,25 +1,49 @@
 import React, { Component } from 'react';
-import { View, Text } from 'react-native';
-import aboutStyle from '../styles/aboutStyle';
+import { View, Text, StyleSheet } from 'react-native';
 
 export default class About extends Component {
     state = {
         title: 'About',
-        text: 'This is my first android application.'
+        text: 'This is my first android application. This application is powered by React-Native.'
     }
 
     render() {
         return (
-            <View style={aboutStyle.container}>
-                <View style={aboutStyle.content}>    
-                    <Text style={aboutStyle.textContent}>{this.state.title}</Text>
-                    <Text style={aboutStyle.text}>{this.state.text}</Text>
+            <View style={styles.container}>
+                <View style={styles.content}>    
+                    <Text style={styles.textContent}>{this.state.title}</Text>
+                    <Text style={styles.text}>{this.state.text}</Text>
                 </View>
 
-                <View style={aboutStyle.footer}>
+                <View style={styles.footer}>
                     <Text style={{color: 'white'}}>egin10</Text>
                 </View>
             </View>
         );
     }
 }
+
+const styles = StyleSheet.create({
+    container: {
+        flex: 1,
+        backgroundColor: '#2c3e50'
+    },
+    content: {
+        flex: 1,
+        justifyContent: 'center',
+        alignItems: 'center',
+    },
+    textContent: {
+        color: 'white',
+        fontSize: 30
+    },
+    text: {
+        textAlign: 'center',
+        fontSize: 15,
+        color: 'white'
+    },
+    footer: {
+        alignItems: 'center',
+        marginBottom: 10
+    }
+});
